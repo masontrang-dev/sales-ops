@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets
+.env
+
+# Generated data (rebuild with: python data/seed.py)
+data/*.db
+
+# Terraform
+infra/.terraform/
+infra/*.tfstate
+infra/*.tfstate.*
+infra/*.tfvars
+infra/.terraform.lock.hcl.bak
+
+# Lambda build output
+build/
+*.zip
+
+.DS_Store

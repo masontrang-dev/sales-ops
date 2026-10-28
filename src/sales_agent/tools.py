@@ -3,7 +3,6 @@ from pathlib import Path
 import json
 
 DB_PATH = Path(__file__).parent.parent.parent / "data" / "sales.db"
-print(DB_PATH)
 
 def _connect():
     con = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True)
@@ -60,7 +59,6 @@ def query_sales(sql, max_rows=50):
         if truncated: 
             result["note"] =  (f"Results truncated to {max_rows} rows. " "Use aggregation (COUNT, SUM, AVG with GROUP BY) or a narrower WHERE clause " "instead of selecting raw rows.")
         output = json.dumps(result)
-        print('output', output)
     
     
     

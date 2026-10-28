@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+# Lets tests do `from sales_agent.tools import ...` without installing the package
+pythonpath = ["src"]
+testpaths = ["tests"]
